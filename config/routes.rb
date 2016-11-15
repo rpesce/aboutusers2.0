@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   
+  devise_for :users
   resources :articles
 
-  get 'home/index'
   root 'home#index'
 
 
