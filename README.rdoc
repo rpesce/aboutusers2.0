@@ -1,0 +1,9 @@
+This is the new version for the About Users website
+
+It runs in ruby 2.1.4p265 (2014-10-27 revision 48166) [x86_64-darwin14.0]
+
+It runs with Rails 4.2.6
+
+The production app runs in a heroku account
+
+to run the server locally just type 'rails server' in the command line
