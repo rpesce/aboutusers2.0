@@ -1,23 +1,53 @@
-<h1>Listing articles</h1>
-<%= link_to 'New article', new_article_path %>
+<div class="container">
+  
+  <div class="row">
+    <div class="col-md-6 well">
+      <h1>THE 100 DAYS CHALLENGE ABOUT USERS</h1>
+      <p>
+        The 100 Days Challenge About Users is a self-challenge that I created to enhance my UX Design and WEB Design skills. <br />
+        My name is Roberto Pesce, I am an UX Designer, and during 100 days I will be posting one article, every day, talking about my discoveries in UX. <br />
+        I'll do it both here and at my Medium account, as well as in a Facebook page that I created to share every interesting to share every interesting article or source that I think can be helpful for other professionals. <br />
+        Come with me in this challenge! Read the articles, follow the challenge on Facebook,  follow me on Medium, use the hashtag #100daysaboutusers to share UX content and also suggest me anything you think is interesting.
+      </p>
+    </div>
+    <div class="col-md-6">
+      <!-- 16:9 aspect ratio -->
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/9EOVPRdnc2Y" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th colspan="2"></th>
-  </tr>
- 
-  <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <td><%= article.text %></td>
-      <td><%= link_to 'Show', article_path(article) %></td>
-      <td><%= link_to 'Edit', edit_article_path(article) %></td>
-      <td><%= link_to 'Delete', article_path(article), method: :delete, data: { confirm: 'If you press "yes" you won\'t be able to undo this action' } %></td>
-    </tr>
-  <% end %>
-</table>
 
 
-<%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="blue_bgd">
+        <% init_date_time = DateTime.parse("2016-09-20 00:01:00") %> <!-- Initial date -->
+        <% now_date_time = DateTime.now.to_date %> <!-- Today's date -->
+        <% day_today = (now_date_time.to_date - init_date_time.to_date).to_i %> <!-- Days so far -->
+        <p>This is day <span><%= day_today %></span> out of 100</p>
+        <p> <span>3</span> Books read | <span>3</span> Influencers interviewed | <span><%= (day_today * 4) %></span> Articles read | <span>X</span> Articles written</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <table>
+      <% @articles.each do |article| %>
+        <tr>
+          <td><%= article.title %></td>
+          <td><%= article.text %></td>
+          <td><%= link_to 'Show', article_path(article) %></td>
+          <td><%= link_to 'Edit', edit_article_path(article) %></td>
+          <td><%= link_to 'Delete', article_path(article), method: :delete, data: { confirm: 'If you press "yes" you won\'t be able to undo this action' } %></td>
+        </tr>
+      <% end %>
+    </table>
+
+    <%= link_to 'New article', new_article_path %>
+    <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
+  </div>
+
+
+</div>
