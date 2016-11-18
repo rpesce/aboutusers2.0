@@ -1,11 +1,15 @@
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
- 
-<p>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</p>
+<h2 align="center"><%= @article.title %> </h2>
+	<div class="well col-xs-8 col-xs-offset-2">
+  		<%= simple_format(@article.text) %>
+	  	<hr>
+	  	<div class="col-xs-6">
+		  	<div class="article_actions">
+		  		<%= link_to 'Back to the main page', articles_path, class: "btn btn-xs btn-success" %>
+		  		<%= link_to 'Edit', edit_article_path(@article), class: "btn btn-xs btn-primary" %>
+				<%= link_to 'Delete', article_path(@article), method: :delete, 
+											data: { confirm: 'If you press "yes" you won\'t be able to undo this action' },
+											class: "btn btn-xs btn-danger" %>
+			</div>
+		</div>
+	</div>
 
-<%= link_to 'Back', articles_path %>
