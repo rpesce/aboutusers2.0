@@ -3,7 +3,11 @@ class ArticlesController < ApplicationController
 
 
 	def index
-		@articles = Article.all
+		@articles = Article.paginate(page: params[:page], per_page: 3).order('created_at DESC')
+		respond_to do |format|
+  			format.html
+  			format.js
+		end
 	end
 
 	def show
@@ -24,7 +28,7 @@ class ArticlesController < ApplicationController
 
 		if @article.save
 			flash[:success] = "Article successfully created"
-			redirect_to @article
+			redirect_to root_path
 		else
 			render 'new'
 		end
@@ -35,7 +39,7 @@ class ArticlesController < ApplicationController
  
   		if @article.update(article_params)
   			flash[:success] = "Article successfully updated!"
-    		redirect_to @article
+    		redirect_to root_path
   		else
     		render 'edit'
   		end
@@ -46,7 +50,7 @@ class ArticlesController < ApplicationController
   		@article.destroy
   		flash[:danger] = "The article was successfully deleted"
  
-  		redirect_to articles_path
+  		redirect_to root_path
 	end
 
 

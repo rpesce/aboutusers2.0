@@ -6,6 +6,8 @@ gem 'rails', '4.2.6'
 gem 'devise'
 gem "twitter-bootstrap-rails"
 gem 'devise-bootstrap-views'
+gem 'will_paginate', '~> 3.1', '>= 3.1.5'
+gem 'bootstrap-will_paginate', '~> 0.0.10'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
