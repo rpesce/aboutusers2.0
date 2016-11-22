@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 	skip_before_action :authenticate_user!, only: [:index]
-
+	before_action :require_user, except: [:index, :show]
 
 	def index
 		@articles = Article.paginate(page: params[:page], per_page: 3).order('created_at DESC')
@@ -24,7 +24,7 @@ class ArticlesController < ApplicationController
 
 	def create
 		@article = Article.new(article_params)
-		@article.user = User.first
+		@article.user = current_user
 
 		if @article.save
 			flash[:success] = "Article successfully created"
@@ -58,6 +58,10 @@ class ArticlesController < ApplicationController
 		def article_params
 				params.require(:article).permit(:title, :text)
 		end
+
+		 def require_user
+    		authenticate_user!
+  		end
 
 
 end

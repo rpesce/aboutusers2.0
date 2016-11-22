@@ -7,9 +7,10 @@
 }
 
 .greeting h1 {
-	padding: 1em 2em 0em 2em;
-	margin: 0;
+	padding: 0 2em;
+	margin-top: 1em;
 	font-size: 1.2em;
+	font-weight: 900;
 }
 
 .greeting p {
@@ -23,25 +24,67 @@
 	padding-top: 1em;
 }
 
-.blue_bgd {
-	margin: 1em 0;
+#p_last {
+	padding-bottom: 1em;
+}
+
+.blue_bgd {	
 	background-color: #252162;
-	height: 5em;
 	text-align: center;
 	color: white;
-	line-height: 0.5;
+	padding: 0 0 .5em 0em;
+	position: relative;
+	display: block;
+	margin-top: 1em;
+	z-index: 0;
+}
+
+.blue_bgd p {
+	font-size: 0.9em;
+	margin: 0 !important;
+	padding: 0 !important;
 }
 
 #today {
 	color: #FFFF00;
-	font-size: 3em;
+	font-size: 2.5em;
 	font-weight: 500;
+	margin-top: 0;
+	padding: 0;
 }
 
 .numbers {
 	color: #ffff00;
-	font-size: 1.3em;
+	font-size: 1em;
 	font-weight: 500;
+}
+
+#circle {
+	margin-top: 1.2em;
+	width: 75px;
+	height: 75px;
+	position: absolute;
+	-webkit-border-radius: 37.5px;
+	-moz-border-radius: 37.5px;
+	border-radius: 37.5px;
+	background: #252162;
+	left: 50%;
+	transform: translate(-50%);
+	top: -2em;
+	z-index: -1;
+}
+
+.articles_list {
+	margin-top: 2em;
+}
+
+.articles_list h2 {
+	color: #252162;
+	font-size: 1em;
+	text-align: center;
+	margin-top: 2em;
+	margin-bottom: 1em;
+	font-weight: 700;
 }
 
 .article-title {

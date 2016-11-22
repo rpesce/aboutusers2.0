@@ -1,3 +1,29 @@
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">About the project and the author</h4>
+      </div>
+      <div class="modal-body">
+        <h3>The 100 Days Challenge About Users</h3>
+        <p>The 100 Days Challenge About Users is an UX project developed by the UX Designer Roberto Pesce to professionals that want to get started in the user experience design field. Born from a real need, we want to create a collaborative environment where professionals and students that believe in the power of the user-centered design can share experiences and learn together.
+
+        <h3>Roberto Pesce, the author</h3>
+        <p>A designer, a dream, and a struggle: the best environment for an idea. The 100 Days Challenge About Users Project comes from the struggle that Roberto Pesce, a BRazilian UX Designer with background in business, project management and design was having to get started in this amazing field called User Experience Design.
+        Back in 2015, when he went to California foccused on getting a job as UX Designer in a big Tech company, he figured that he would have to master some skills to have, at leas, a chance. As he started deepening his knowledges in UX it didn't take too long for him to notice how har can be, even to know 'how to start'.
+        That's when he got the insight: Even with my experience I'm having a hard time to get started in UX. Other professionals should be experiencing the same issues. What if I could share my studies and encourage them to share theirs?". 
+        This is how the challenge came up. In order to get committed I adopted the 100 days strategy and focused on creating a collaborative environment for designers, entrepreneurs, project managers and team members. So we could all learn together.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <div class="navbar navbar-default navbar-static-top">
   <div class="container">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
@@ -10,7 +36,21 @@
       <ul class="nav navbar-nav">
         <li><%= link_to "Read on Medium", "https://www.medium.com/@robertopesce", target: "_blank" %></li>
         <li><%= link_to "Go to Facebook", "http://www.facebook.com/aboutusersux", target: "_blank" %></li>
-        <li><%= link_to "About", "/path3" %></li>
+        <li>
+        <!-- Button trigger modal -->
+        <a data-toggle="modal" data-target="#myModal" href="#">
+          About
+        </a>
+        </li>
+        <% if user_signed_in? %>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Actions <span class="caret"></span>
+              <ul class="dropdown-menu">
+                <li><%= link_to 'New article', new_article_path %></li>
+                <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
+              </ul>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>

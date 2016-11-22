@@ -1,8 +1,8 @@
-<div class="container">
+<div class="container-fluid">
   
   <div class="row">
-    <div class="col-md-6 well">
-      <div class="greeting">
+    <div class="col-sm-12 col-md-6">
+      <div class="greeting well">
         <h1>THE 100 DAYS CHALLENGE ABOUT USERS</h1>
         <p id="p_first">
           The 100 Days Challenge About Users is a self-challenge that I created to enhance my UX Design and WEB Design skills.
@@ -13,41 +13,46 @@
         <p>
           I'll do it both here and at my Medium account, as well as in a Facebook page that I created to share every interesting to share every interesting article or source that I think can be helpful for other professionals.
         </p>
-        <p>
+        <p id="p_last">
           Come with me in this challenge! Read the articles, follow the challenge on Facebook,  follow me on Medium, use the hashtag #100daysaboutusers to share UX content and also suggest me anything you think is interesting.
         </p>
       </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-sm-12 col-md-6">
       <!-- 16:9 aspect ratio -->
       <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/9EOVPRdnc2Y" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/9EOVPRdnc2Y" allowfullscreen> 
+        </iframe>
       </div>
     </div>
   </div>
-
-
 
   <div class="row">
     <div class="col-sm-12">
       <div class="blue_bgd">
+        <div id="circle"></div>
         <% init_date_time = DateTime.parse("2016-09-20 00:01:00") %> <!-- Initial date -->
         <% now_date_time = DateTime.now.to_date %> <!-- Today's date -->
         <% day_today = (now_date_time.to_date - init_date_time.to_date).to_i %> <!-- Days so far -->
-        <p>This is day <span id="today"><%= day_today %></span> out of 100</p>
-        <p> <span class="numbers">3</span> Books read | <span class="numbers">3</span> Influencers interviewed | <span class="numbers"><%= (day_today * 4) %></span> Articles read | <span class="numbers">X</span> Articles written</p>
+        <p id="first_p">This is day <span id="today"> <%= day_today %> </span> out of 100</p>
+        <p><span class="numbers">3 </span>Books read |<span class="numbers"> 3 </span>Influencers interviewed | <span class="numbers"><%= (day_today * 4) %> </span>Articles read | <span class="numbers">X </span>Articles written</p>
       </div>
     </div>
   </div>
 
-  <div id="listing_articles">
-    <%= render @articles %>
-  </div>  
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="articles_list">
+        <h2>ALL ARTICLES</h2>
+        <div id="listing_articles">
+          <%= render @articles %>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <div align="center" id="infinite-scrolling">
     <%= will_paginate @articles %>
   </div>
 
 </div>
-
- <%= link_to 'New article', new_article_path %>
-<%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
