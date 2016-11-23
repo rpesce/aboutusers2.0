@@ -47,10 +47,6 @@
 	padding: 0.5em;
 }
 
-.hidden {
-	display: none;
-}
-
 #circle {
 	margin-top: 1.2em;
 	width: 67px;
@@ -73,10 +69,6 @@
 	margin-top: 2em;
 	margin-bottom: 1em;
 	font-weight: 700;
-}
-
-.article_header {
-	border-bottom: 10px solid black;
 }
 
 .article-title {
@@ -123,23 +115,104 @@ footer {
 }
 
 
+@media screen and (max-width: 969px) {
 
+	#nshow {
+		display: none;
+	}
 
+}
 
-medias
+@media screen and (min-width: 970px) {
 
+	.greeting {
+		padding: 0;
+		margin: 0;
+	}
 
-p_last {
-	padding-bottom: 1em;
+	.greeting h1 {
+		margin: 0 !important;
+		font-size: 1.3em;
+	}
+
+	.greeting p {
+		font-size: 0.9em;
+	}
+
+	#p_first {
+		padding-top: 1.3em;
+	}
+
+	.blue_bgd {	
+		padding: 0 0 .7em 0;
+		margin-top: 1em;
+	}
+
+	.blue_bgd p {
+		font-size: 1em;
+		margin: 0 !important;
+		padding: 0;
+	}
+
+	#today {
+		font-size: 3em;
+		margin: 0 0.5em;
+		padding: 0;
+	}
+
+	#nshow {
+		display: inline;
+	}
+
+	.numbers {
+		color: #ffff00;
+		font-size: 1em;
+		font-weight: 500;
+		}
+
+	#circle {
+		margin-top: 1.2em;
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		-webkit-border-radius: 50px;
+		-moz-border-radius: 50px;
+		border-radius: 50px;
+		background: #252162;
+		left: 50%;
+		transform: translate(-50%);
+		top: -2em;
+		z-index: -1;
+	}
+
+	.articles_list h2 {
+		font-size: 1.2em;
+	}
+
+	#myModalLabel {
+		font-size: 1.2em;
+	}
+
+	.modal-body h3 {
+		font-size: 1.1em;
+	}
+
+	.modal-body p {
+		font-size: 1em;
+
+	}
+
+	.show_h2 {
+		font-size: 1.2em;
+	}
+
+	footer {
+		margin-top: 4em;
+		text-align: center;
+		height: 4em;
+		background-color: #252162;
+		color: #ffffff;
+	}
 }
 
 
-hidden {
-	display: none;
-}
-
-.numbers {
-	color: #ffff00;
-	font-size: 1em;
-	font-weight: 500;
-}
