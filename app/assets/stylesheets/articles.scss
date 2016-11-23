@@ -75,16 +75,26 @@
 	font-weight: 700;
 }
 
+.article_header {
+	border-bottom: 10px solid black;
+}
+
 .article-title {
 	font-weight: 600;
 	font-size: 1em;
-	border-bottom: 1px solid #eaeaea;
-	padding-bottom: 1em;
+	padding-bottom: 0.5em;
 	text-decoration: underline;
 }
 
 .article-body {
+	border-top: 1px solid #eaeaea;
+	margin-top: 1em;
 	padding: 1em 0;
+}
+
+#medium_btn {
+	margin-top: 0;
+
 }
 
 #myModalLabel {
@@ -100,7 +110,9 @@
 
 }
 
-
+.show_h2 {
+	font-size: 1.2em;
+}
 
 footer {
 	margin-top: 4em;

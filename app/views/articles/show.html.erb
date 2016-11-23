@@ -1,17 +1,19 @@
-<h2 align="center"><%= @article.title %> </h2>
-	<div class="well col-xs-8 col-xs-offset-2">
+<h2 class="show_h2" align="center"><%= @article.title %> </h2>
+	<div class="well col-xs-12">
   		<%= simple_format(@article.text) %>
-	  	<hr>
-	  	<div class="col-xs-6">
-		  	<div class="article_actions">
-		  		<%= link_to 'Back', root_path, class: "btn btn-xs btn-success" %>
-		  		<% if user_signed_in? == @article.user %>
-			  		<%= link_to 'Edit', edit_article_path(@article), class: "btn btn-xs btn-primary" %>
-					<%= link_to 'Delete', article_path(@article), method: :delete, 
-												data: { confirm: 'If you press "yes" you won\'t be able to undo this action' },
-												class: "btn btn-xs btn-danger" %>
-				<% end %>
-			</div>
+	</div>
+  	<div class="col-xs-12">
+	  	<div class="article_actions">
+	  		<%= link_to 'Back', root_path, class: "btn btn-xs btn-success" %>
+	  		<%= link_to "Read on Medium", "http://#{@article.medium}", id: "medium_btn", class: "btn btn-xs btn-primary", target: "_blank" %>
+
+	  		<% if user_signed_in? %>
+		  		<%= link_to 'Edit', edit_article_path(@article), class: "btn btn-xs btn-warning" %>
+				<%= link_to 'Delete', article_path(@article), method: :delete, 
+											data: { confirm: 'If you press "yes" you won\'t be able to undo this action' },
+											class: "btn btn-xs btn-danger" %>
+			<% end %>
+		
 		</div>
 	</div>
 
