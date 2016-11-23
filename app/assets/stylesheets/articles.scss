@@ -4,69 +4,61 @@
 
 .greeting {
 	color: #252162;
+	padding: 0.3em 0.3em;
 }
 
 .greeting h1 {
-	padding: 0 2em;
-	margin-top: 1em;
-	font-size: 1.2em;
-	font-weight: 900;
+	font-size: 1em;
+	font-weight: 600;
+	text-align: center;
 }
 
 .greeting p {
-	padding: 0.3em 3em 0.3em 3em;
-	margin: 0;
-	text-align: justify;
-	font-size: 0.9em;
+	text-align: left;
+	font-size: 0.85em;
 }
 
 #p_first {
 	padding-top: 1em;
 }
 
-#p_last {
-	padding-bottom: 1em;
-}
-
 .blue_bgd {	
 	background-color: #252162;
 	text-align: center;
 	color: white;
-	padding: 0 0 .5em 0em;
+	padding: 0 0 .7em 0;
 	position: relative;
 	display: block;
-	margin-top: 1em;
+	margin-top: 2em;
 	z-index: 0;
 }
 
 .blue_bgd p {
-	font-size: 0.9em;
+	font-size: 0.85em;
 	margin: 0 !important;
-	padding: 0 !important;
+	padding: 0.2em 0;
 }
 
 #today {
 	color: #FFFF00;
 	font-size: 2.5em;
-	font-weight: 500;
-	margin-top: 0;
-	padding: 0;
+	font-weight: 600;
+	margin: 0 0.5em;
+	padding: 0.5em;
 }
 
-.numbers {
-	color: #ffff00;
-	font-size: 1em;
-	font-weight: 500;
+.hidden {
+	display: none;
 }
 
 #circle {
 	margin-top: 1.2em;
-	width: 75px;
-	height: 75px;
+	width: 67px;
+	height: 67px;
 	position: absolute;
-	-webkit-border-radius: 37.5px;
-	-moz-border-radius: 37.5px;
-	border-radius: 37.5px;
+	-webkit-border-radius: 34px;
+	-moz-border-radius: 34px;
+	border-radius: 34px;
 	background: #252162;
 	left: 50%;
 	transform: translate(-50%);
@@ -74,13 +66,9 @@
 	z-index: -1;
 }
 
-.articles_list {
-	margin-top: 2em;
-}
-
 .articles_list h2 {
 	color: #252162;
-	font-size: 1em;
+	font-size: 0.95em;
 	text-align: center;
 	margin-top: 2em;
 	margin-bottom: 1em;
@@ -88,19 +76,31 @@
 }
 
 .article-title {
-	font-weight: bold;
-	font-size: 1.2em;
+	font-weight: 600;
+	font-size: 1em;
+	border-bottom: 1px solid #eaeaea;
+	padding-bottom: 1em;
+	text-decoration: underline;
 }
 
 .article-body {
-	border-top: 1px solid #eaeaea;
-	padding-top: 2em;
-	padding-bottom: 2em;
+	padding: 1em 0;
 }
 
-.hidden {
-	display: none;
+#myModalLabel {
+	font-size: 1.2em;
 }
+
+.modal-body h3 {
+	font-size: 1em;
+}
+
+.modal-body p {
+	font-size: 0.8em;
+
+}
+
+
 
 footer {
 	margin-top: 4em;
@@ -108,4 +108,26 @@ footer {
 	height: 4em;
 	background-color: #252162;
 	color: #ffffff;
+}
+
+
+
+
+
+medias
+
+
+p_last {
+	padding-bottom: 1em;
+}
+
+
+hidden {
+	display: none;
+}
+
+.numbers {
+	color: #ffff00;
+	font-size: 1em;
+	font-weight: 500;
 }

@@ -53,7 +53,6 @@ class ArticlesController < ApplicationController
   		redirect_to root_path
 	end
 
-
 	private
 		def article_params
 				params.require(:article).permit(:title, :text)

@@ -1,25 +1,26 @@
 <div class="container-fluid">
   
   <div class="row">
-    <div class="col-sm-12 col-md-6">
-      <div class="greeting well">
-        <h1>THE 100 DAYS CHALLENGE ABOUT USERS</h1>
-        <p id="p_first">
-          The 100 Days Challenge About Users is a self-challenge that I created to enhance my UX Design and WEB Design skills.
-        </p>
-        <p>
-          My name is Roberto Pesce, I am an UX Designer, and during 100 days I will be posting one article, every day, talking about my discoveries in UX.
-        </p>
-        <p>
-          I'll do it both here and at my Medium account, as well as in a Facebook page that I created to share every interesting to share every interesting article or source that I think can be helpful for other professionals.
-        </p>
-        <p id="p_last">
-          Come with me in this challenge! Read the articles, follow the challenge on Facebook,  follow me on Medium, use the hashtag #100daysaboutusers to share UX content and also suggest me anything you think is interesting.
-        </p>
+    <div class="col-md-6">
+      <div class="well">
+        <div class="greeting">    
+          <h1>THE 100 DAYS CHALLENGE<br />ABOUT USERS</h1>
+          <p id="p_first">
+            The 100 Days Challenge About Users is a self-challenge that I created to enhance my UX Design and WEB Design skills.
+          </p>
+          <p>
+            My name is Roberto Pesce, I am an UX Designer, and during 100 days I will be posting one article, every day, talking about my discoveries in UX.
+          </p>
+          <p>
+            I'll do it both here and at my Medium account, as well as in a Facebook page that I created to share every interesting to share every interesting article or source that I think can be helpful for other professionals.
+          </p>
+          <p id="p_last">
+            Come with me in this challenge! Read the articles, follow the challenge on Facebook,  follow me on Medium, use the hashtag #100daysaboutusers to share UX content and also suggest me anything you think is interesting.
+          </p>
+        </div>
       </div>
     </div>
-    <div class="col-sm-12 col-md-6">
-      <!-- 16:9 aspect ratio -->
+    <div class="col-md-6">
       <div class="embed-responsive embed-responsive-16by9">
         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7NHiyJ_GYss" allowfullscreen>
         </iframe>
@@ -28,20 +29,24 @@
   </div>
 
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-xs-12">
       <div class="blue_bgd">
         <div id="circle"></div>
         <% init_date_time = DateTime.parse("2016-09-20 00:01:00") %> <!-- Initial date -->
         <% now_date_time = DateTime.now.to_date %> <!-- Today's date -->
         <% day_today = (now_date_time.to_date - init_date_time.to_date).to_i %> <!-- Days so far -->
-        <p id="first_p">This is day <span id="today"> <%= day_today %> </span> out of 100</p>
-        <p><span class="numbers">3 </span>Books read |<span class="numbers"> 3 </span>Influencers interviewed | <span class="numbers"><%= (day_today * 4) %> </span>Articles read | <span class="numbers">X </span>Articles written</p>
+        <p>This is day <span id="today"><%= day_today %></span> out of 100</p>
+        
+        <div class="hidden"> <!--This will only appear for sm to large screens -->
+          <p><span class="numbers">3 </span>Books read |<span class="numbers"> 3 </span>Influencers interviewed | <span class="numbers"><%= (day_today * 4) %> </span>Articles read | <span class="numbers"><%= Article.count %> </span>Articles written</p>
+        </div>
+      
       </div>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-xs-12">
       <div class="articles_list">
         <h2>ALL ARTICLES</h2>
         <div id="listing_articles">
@@ -51,8 +56,12 @@
     </div>
   </div>
   
-  <div align="center" id="infinite-scrolling">
-    <%= will_paginate @articles %>
+  <div class="row">
+    <div class="col-xs-12">
+      <div align="center" id="infinite-scrolling">
+        <%= will_paginate @articles %>
+      </div>
+    </div>
   </div>
 
 </div>
