@@ -6,16 +6,16 @@
         <div class="greeting">    
           <h1>THE 100 DAYS CHALLENGE<br />ABOUT USERS</h1>
           <p id="p_first">
-            The 100 Days Challenge About Users is a self-challenge that I created to enhance my UX Design and WEB Design skills.
+            The 100 Days Challenge About Users is a self-challenge that I created to enhance my own UX and Web Design skills.
           </p>
           <p>
             My name is Roberto Pesce, I am an UX Designer, and during 100 days I will be posting one article, every day, talking about my discoveries in UX.
           </p>
           <p>
-            I'll do it both here and at my Medium account, as well as in a Facebook page that I created to share every interesting to share every interesting article or source that I think can be helpful for other professionals.
+            I'll be publishing the articles both here and on my Medium account, and will be curating relevant content and sharing it on Facebook.
           </p>
           <p id="p_last">
-            Come with me in this challenge! Read the articles, follow the challenge on Facebook,  follow me on Medium, use the hashtag #100daysaboutusers to share UX content and also suggest me anything you think is interesting.
+            Come along with me in this challenge! You can read the articles, follow the challenge on Facebook to keep opdateb about relevant content, follow me on Medium, and also use the hashtag #100daysaboutusers on your sharings. This way we'll be spreading UX and learging together!
           </p>
         </div>
       </div>
@@ -34,7 +34,7 @@
         <div id="circle"></div>
         <% init_date_time = DateTime.parse("2016-09-20 00:01:00") %> <!-- Initial date -->
         <% now_date_time = DateTime.now.to_date %> <!-- Today's date -->
-        <% day_today = (now_date_time.to_date - init_date_time.to_date).to_i %> <!-- Days so far -->
+        <% day_today = (now_date_time.to_date - init_date_time.to_date + 1).to_i %> <!-- Days gone so far -->
         <p>This is day <span id="today"><%= day_today %></span> out of 100</p>
         
         <div id="nshow"> <!--This will only appear for md to large screens -->
