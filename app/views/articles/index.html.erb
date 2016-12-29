@@ -9,13 +9,14 @@
             The 100 Days Challenge About Users is a self-challenge that I created to enhance my own UX and Web Design skills.
           </p>
           <p>
-            My name is Roberto Pesce, I am an UX Designer, and during 100 days I will be posting one article, every day, talking about my discoveries in UX.
+            My name is Roberto Pesce, I am a UX Designer and during 100 days I will be posting one article, every day, talking about my discoveries in UX.
           </p>
           <p>
             I'll be publishing the articles both here and on my Medium account, and will be curating relevant content and sharing it on Facebook.
           </p>
           <p id="p_last">
-            Come along with me in this challenge! You can read the articles, follow the challenge on Facebook, follow me on Medium, and also use the hashtag #100DaysAboutUsers every time you share any UX content. This way we'll be spreading UX and learning together!
+            Come along with me in this challenge! You can read the articles, follow the challenge on Facebook, follow me on Medium, and also use the hashtag #100DaysAboutUsers every time you share any UX content. <br />
+            Let's spread UX and learn together!
           </p>
         </div>
       </div>
@@ -31,14 +32,11 @@
   <div class="row">
     <div class="col-xs-12">
       <div class="blue_bgd">
-        <div id="circle"></div>
         <% init_date_time = DateTime.parse("2016-09-20 00:01:00") %> <!-- Initial date -->
         <% now_date_time = DateTime.now.to_date %> <!-- Today's date -->
         <% day_today = (now_date_time.to_date - init_date_time.to_date + 1).to_i %> <!-- Days gone so far -->
-        <p>This is day <span id="today"><%= day_today %></span> out of 100</p>
-        
-        <div id="nshow"> <!--This will only appear for md to large screens -->
-          <p><span class="numbers">3 </span>Books read |<span class="numbers"> 3 </span>Influencers interviewed | <span class="numbers"><%= (day_today * 4) %> </span>Articles read | <span class="numbers"><%= Article.count %> </span>Articles written</p>
+        <div>
+          <p><span class="numbers">3 </span>Books read |<span class="numbers"> 3 </span>Influencers interviewed | <span class="numbers">404 </span>Articles read | <span class="numbers"><%= Article.count %> </span>Articles written</p>
         </div>
       
       </div>

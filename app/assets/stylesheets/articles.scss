@@ -26,7 +26,7 @@
 	background-color: #252162;
 	text-align: center;
 	color: white;
-	padding: 0 0 .7em 0;
+	padding: 1 0 .7em 0;
 	position: relative;
 	display: block;
 	margin-top: 2em;
@@ -45,6 +45,12 @@
 	font-weight: 600;
 	margin: 0 0.5em;
 	padding: 0.5em;
+}
+
+.numbers {
+		color: #ffff00;
+		font-size: 0.9em;
+		font-weight:500;
 }
 
 #circle {
@@ -114,15 +120,6 @@ footer {
 	color: #ffffff;
 }
 
-
-@media screen and (max-width: 969px) {
-
-	#nshow {
-		display: none;
-	}
-
-}
-
 @media screen and (min-width: 970px) {
 
 	.greeting {
@@ -144,7 +141,7 @@ footer {
 	}
 
 	.blue_bgd {	
-		padding: 0 0 .7em 0;
+		padding: 1em 0;
 		margin-top: 1em;
 	}
 
